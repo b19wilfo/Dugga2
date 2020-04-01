@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        file:///android_asset/about.html
     }
 
     @Override
@@ -54,14 +56,9 @@ public class MainActivity extends AppCompatActivity {
            one (1) screenshot showing your external web page.
         */
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        WebView myWebView = (WebView) findViewById(R.id.my_webview);
+        myWebView.loadUrl("http://www.example.com");
+
     }
 
     @Override

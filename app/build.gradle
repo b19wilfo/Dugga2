@@ -1,3 +1,5 @@
+import com.example.webviewapp.R
+
 apply plugin: 'com.android.application'
 
 android {

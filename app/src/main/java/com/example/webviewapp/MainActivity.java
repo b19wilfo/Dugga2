@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -33,7 +34,12 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       webView = findViewById(R.id.my_webview);
+        webView = findViewById(R.id.my_webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebChromeClient(new WebChromeClient());
+
+
+
 
        //webView = new WebView(this);
     }
